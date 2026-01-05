@@ -1,0 +1,10 @@
+apiVersion: v2
+name: paste
+type: application
+version: 1.0.0
+appVersion: ''
+
+dependencies:
+  - name: lib
+    version: 2.0.x
+    repository: 'https://gitlab.com/api/v4/projects/68994698/packages/helm/stable/'

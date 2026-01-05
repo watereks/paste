@@ -1,0 +1,22 @@
+lib:
+  image:
+    repository: 'registry.gitlab.com/faithnode/common/pastemyst'
+
+  environment:
+    PORT: 80
+    HOSTNAME: 0.0.0.0
+
+  deployment:
+    livenessProbe:
+      httpGet:
+        path: /livez
+        port: 80
+    readinessProbe:
+      httpGet:
+        path: /readyz
+        port: 80
+
+  service:
+    ports:
+      - name: http
+        port: 80

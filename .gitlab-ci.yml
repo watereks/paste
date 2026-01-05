@@ -1,0 +1,3 @@
+include:
+  - project: 'faithnode/devops/ci-cd'
+    file: 'pipelines/nextjs-app/.gitlab-ci.yml'

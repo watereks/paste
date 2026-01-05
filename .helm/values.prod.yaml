@@ -1,0 +1,16 @@
+lib:
+  nodeSelector:
+    node-role.kubernetes.io/worker: "true"
+
+  environment:
+    values: %...%
+
+  deployment:
+    replicas: 3
+
+  ingress:
+    hosts:
+      - host: '%DOMAIN%'
+        pathType: ImplementationSpecific
+        path: /
+        name: http

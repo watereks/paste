@@ -1,0 +1,12 @@
+lib:
+  environment:
+    values: %...%
+
+  ingress:
+    hosts:
+      - host: '%DOMAIN%'
+        pathType: ImplementationSpecific
+        path: /
+        name: http
+        tls:
+          enabled: true
